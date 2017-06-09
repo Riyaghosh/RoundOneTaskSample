@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyRounOneTaskSample</string>
+    <string name="toolbarHometxt">Home</string>
+
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
+    <string name="yellow">yellow</string>
+    <string name="black">black</string>
+    <color name="white">#ffff</color>
+</resources>

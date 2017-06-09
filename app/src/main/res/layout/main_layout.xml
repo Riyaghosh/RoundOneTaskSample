@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color"
+            android:padding="@dimen/_10sdp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways|snap" >
+
+            <include layout="@layout/common_toolbar" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_150sdp">
+
+
+           <android.support.v4.view.ViewPager
+               android:id="@+id/viewpager"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_alignParentTop="true"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true" />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_above="@+id/ll_swip_dot"
+               >
+               <ImageView
+                   android:id="@+id/main_play_img"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/play"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/main_tv1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:text="Chain smoker new album 2016"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_toRightOf="@+id/main_play_img"
+                   android:textColor="#ffff"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/main_tv2"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:textSize="@dimen/_10sdp"
+                   android:text="Chain smoker new album 2016"
+                   android:layout_toRightOf="@+id/main_play_img"
+                   android:layout_below="@+id/main_tv1"
+                   android:textColor="#ffff"/>
+           </RelativeLayout>
+           <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/ll_swip_dot"
+               android:orientation="vertical"
+               android:layout_alignParentBottom="true"
+
+               >
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center">
+
+                   <ImageView
+                       android:id="@+id/footer_imageview1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/ic_slider_deselect"
+
+                       />
+
+                   <ImageView
+                       android:id="@+id/footer_imageview2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="4dp"
+                       android:layout_toRightOf="@+id/footer_imageview1"
+                       android:src="@drawable/ic_slider_deselect" />
+
+                   <ImageView
+                       android:id="@+id/footer_imageview3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:layout_toRightOf="@+id/footer_imageview2"
+                       android:src="@drawable/ic_slider_deselect" />
+
+                   <ImageView
+                       android:id="@+id/footer_imageview5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:layout_margin="4dp"
+                       android:layout_toRightOf="@+id/footer_imageview4"
+                       android:src="@drawable/ic_slider_deselect" />
+
+                   <ImageView
+                       android:id="@+id/footer_imageview6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:layout_toRightOf="@+id/footer_imageview5"
+                       android:src="@drawable/ic_slider_deselect" />
+
+
+               </LinearLayout>
+
+
+           </LinearLayout>
+       </RelativeLayout>
+    </LinearLayout>
+
+
+       <!-- our tablayout to display tabs  -->
+       <android.support.design.widget.TabLayout
+           android:id="@+id/tabs"
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           app:tabMode="fixed"
+           app:tabGravity="fill"/>
+
+       <android.support.v4.view.ViewPager
+           android:id="@+id/slidePager"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           />
+
+
+
+</LinearLayout>
